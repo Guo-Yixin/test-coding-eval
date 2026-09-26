@@ -1,4 +1,6 @@
-# Test Coding Eval
+# test-coding-eval
+
+for coding-agent project test agent eval
 
 An independent, versioned target repository for evaluating the CODING Agent. The Agent under test runs from the `coding-agent` project; this repository is the codebase it receives as its task workspace.
 
