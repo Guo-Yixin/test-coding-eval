@@ -1,0 +1,21 @@
+{
+  "case_id": "taskboard-status-filter",
+  "prompt": "请先使用 hybrid_code_search 定位 filter_by_status 的实现，再修复状态筛选：status 比较应忽略大小写；status 为 null 时仍返回所有任务；不能修改输入列表或任务对象。请补充/调整 tests/test_filter_by_status.py，覆盖大小写混合、没有匹配项和输入未被修改。只修改 taskboard/tasks.py 与 tests/test_filter_by_status.py。",
+  "base_ref": "d19ddda0ac269adf1e68d7d2840968527b313bc4",
+  "gold_files": ["taskboard/tasks.py"],
+  "target_tests": [["python", "-m", "pytest", "tests/test_filter_by_status.py", "-q"]],
+  "regression_tests": [["python", "-m", "pytest", "tests/test_baseline.py", "-q"]],
+  "oracle_tests": [["python", "{oracle_scripts}/test_taskboard_status_filter.py", "{target_repo}"]],
+  "allowed_files": ["taskboard/tasks.py", "tests/test_filter_by_status.py"],
+  "requires_patch": true,
+  "expected_status": "completed",
+  "timeout_seconds": 480,
+  "metadata": {
+    "repo_url": "https://github.com/Guo-Yixin/test-coding-eval.git",
+    "purpose": "independent coding task: implement case-insensitive status filtering",
+    "required_changed_files": ["taskboard/tasks.py", "tests/test_filter_by_status.py"],
+    "model_call_limit": 16,
+    "tool_call_limit": 20,
+    "auto_approve_plan": true
+  }
+}
