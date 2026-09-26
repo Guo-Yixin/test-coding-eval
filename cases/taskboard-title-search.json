@@ -14,8 +14,8 @@
     "repo_url": "https://github.com/Guo-Yixin/test-coding-eval.git",
     "purpose": "independent coding task: implement predictable case-insensitive title search",
     "required_changed_files": ["taskboard/tasks.py", "tests/test_search_tasks.py"],
-    "model_call_limit": 16,
-    "tool_call_limit": 20,
+    "model_call_limit": 24,
+    "tool_call_limit": 40,
     "auto_approve_plan": true
   }
 }
